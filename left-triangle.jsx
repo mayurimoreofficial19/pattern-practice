@@ -1,14 +1,10 @@
-let num = 3;
 let pattern = "";
+let num = 5;
 
-if (num > 1) {
-  for (let i = 1; i <= num; i++) {
-    for (let j = 1; j <= i; j++) {
-      pattern += "* ";
-    }
-    pattern += "\n";
+for (let i = 1; i <= num; i++) {
+  for (let j = 1; j <= i; j++) {
+    pattern += "* ";
   }
-  console.log(pattern);
-} else {
-  pattern = "Number must be greater tha 1 to print start pattern";
+  pattern += "\n";
 }
+console.log(pattern);

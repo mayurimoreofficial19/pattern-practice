@@ -2,7 +2,11 @@ let pattern = "";
 let num = 5;
 
 for (let i = 1; i <= num; i++) {
-  for (let j = 0; j <= num - i; j++) {
+  for (let j = 1; j <= num - i; j++) {
+    pattern += "  ";
+  }
+
+  for (let k = 1; k <= i; k++) {
     pattern += "* ";
   }
   pattern += "\n";

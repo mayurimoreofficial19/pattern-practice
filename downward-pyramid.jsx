@@ -1,14 +1,20 @@
-let pattern = "";
 let num = 5;
-
-for (let i = num; i >= 1; i--) {
-  for (let j = 1; j <= num - i; j++) {
-    pattern += "  ";
+let pattern = ""; //pattern string
+if (num > 1) {
+  //no star pattern for 0 or negative numbers.
+  for (let i = num; i >= 1; i--) {
+    //first 'for loop' for horizontal lines  and reversed pattern
+    for (let j = 1; j <= num - i; j++) {
+      //second 'for loop' to add 'spaces' before pattern
+      pattern += "  ";
+    }
+    for (let k = 1; k <= 2 * i - 1; k++) {
+      //third 'for loop' to add * to pattern string
+      pattern += "* ";
+    }
+    pattern += "\n"; //new line after row completion
   }
-
-  for (let k = 1; k <= 2 * i - 1; k++) {
-    pattern += "* ";
-  }
-  pattern += "\n";
+  console.log(pattern); //printing star to console
+} else {
+  pattern = "Number must be greater than 1 to print star pattern.";
 }
-console.log(pattern);
